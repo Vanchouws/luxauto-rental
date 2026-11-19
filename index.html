@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxAuto — Оренда преміум автомобілів у Києві</title>
+  <meta name="description" content="LuxAuto — преміальний сервіс оренди автомобілів у Києві. Mercedes, BMW, Ferrari, Rolls-Royce та інші розкішні авто з водієм або без. Гнучкі умови, страхування включено.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuxAuto — Оренда преміум автомобілів">
+  <meta property="og:description" content="Преміальний сервіс оренди автомобілів. Mercedes, BMW, Ferrari, Rolls-Royce та інші розкішні авто.">
+  <meta property="og:url" content="https://luxauto.ua/">
+  <meta property="og:image" content="https://luxauto.ua/img/og-image.jpg">
+  <meta property="og:locale" content="uk_UA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LuxAuto — Оренда преміум автомобілів">
+  <meta name="twitter:description" content="Преміальний сервіс оренди розкішних автомобілів у Києві">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════ -->
+<header class="header" role="banner">
+  <div class="header__inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="LuxAuto — Головна">
+      <svg class="logo__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="40" height="40" rx="4" fill="#1A1A1A"/>
+        <path d="M8 26 L14 14 L20 22 L26 14 L32 26" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="20" cy="30" r="2" fill="#C9A84C"/>
+      </svg>
+      <span class="logo__text">Lux<span>Auto</span></span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav" role="navigation" aria-label="Головна навігація">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link" data-ua="Головна" data-en="Home">Головна</a></li>
+        <li><a href="catalog.html" class="nav__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+        <li><a href="about.html" class="nav__link" data-ua="Про нас" data-en="About">Про нас</a></li>
+        <li><a href="contact.html" class="nav__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+      </ul>
+
+      <div class="nav__controls">
+        <div class="nav__lang" role="group" aria-label="Вибір мови">
+          <button class="lang-btn active" data-lang="ua" aria-label="Українська мова">UA</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="theme-btn" id="theme-btn" aria-label="Змінити тему" title="Змінити тему">🌙</button>
+      </div>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true">
+  <ul class="mobile-nav__list">
+    <li><a href="index.html" class="mobile-nav__link" data-ua="Головна" data-en="Home">Головна</a></li>
+    <li><a href="catalog.html" class="mobile-nav__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+    <li><a href="about.html" class="mobile-nav__link" data-ua="Про нас" data-en="About">Про нас</a></li>
+    <li><a href="contact.html" class="mobile-nav__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+  </ul>
+  <div class="mobile-nav__controls">
+    <div class="nav__lang">
+      <button class="lang-btn active" data-lang="ua">UA</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button class="theme-btn" aria-label="Змінити тему" onclick="document.getElementById('theme-btn').click()">🌙</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN
+══════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Головний банер">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__ornament">
+          <span>✦</span>
+          <span data-ua="Преміальний автосервіс" data-en="Premium Car Service">Преміальний автосервіс</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span data-ua="Оренда преміум" data-en="Premium Car">Оренда преміум</span>
+          <em data-ua="автомобілів" data-en="Rental">автомобілів</em>
+        </h1>
+
+        <p class="hero__subtitle" data-ua="Відчуйте справжню розкіш на дорогах України. Наш флот нараховує понад 50 преміальних автомобілів — від елегантних бізнес-седанів до спортивних суперкарів." data-en="Experience true luxury on Ukraine's roads. Our fleet features over 50 premium vehicles — from elegant business sedans to powerful supercars.">
+          Відчуйте справжню розкіш на дорогах України. Наш флот нараховує понад 50 преміальних автомобілів — від елегантних бізнес-седанів до спортивних суперкарів.
+        </p>
+
+        <div class="hero__actions">
+          <a href="catalog.html" class="btn btn--primary btn--lg" data-ua="Переглянути автопарк" data-en="Browse Fleet">
+            ✦ Переглянути автопарк
+          </a>
+          <a href="contact.html" class="btn btn--ghost btn--lg" data-ua="Зв'язатися з нами" data-en="Contact Us">
+            Зв'язатися з нами
+          </a>
+        </div>
+
+        <div class="hero__stats" aria-label="Статистика компанії">
+          <div class="hero__stat">
+            <span class="hero__stat-num">500+</span>
+            <span class="hero__stat-label" data-ua="Задоволених клієнтів" data-en="Happy clients">Задоволених клієнтів</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">50+</span>
+            <span class="hero__stat-label" data-ua="Преміум авто" data-en="Premium cars">Преміум авто</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">5</span>
+            <span class="hero__stat-label" data-ua="Років досвіду" data-en="Years of experience">Років досвіду</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED CARS ────────────────────────────────────── -->
+  <section class="section" id="featured" aria-label="Популярні автомобілі">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__ornament">✦ ◈ ✦</div>
+        <span class="section__label" data-ua="Наш автопарк" data-en="Our Fleet">Наш автопарк</span>
+        <h2 class="section__title" data-ua="Популярні автомобілі" data-en="Featured Cars">Популярні автомобілі</h2>
+        <p class="section__subtitle" data-ua="Оберіть із нашого добірного флоту преміальних автомобілів. Кожне авто проходить ретельну технічну перевірку перед кожною орендою." data-en="Choose from our curated fleet of premium vehicles. Every car undergoes thorough technical inspection before each rental.">
+          Оберіть із нашого добірного флоту преміальних автомобілів. Кожне авто проходить ретельну технічну перевірку перед кожною орендою.
+        </p>
+      </div>
+
+      <div class="cars-grid reveal-stagger">
+
+        <!-- Car 1: Mercedes S-Class -->
+        <article class="car-card">
+          <div class="car-card__image" role="img" aria-label="Mercedes-Benz S-Class">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Mercedes-Benz_W223_IMG_3969.jpg" alt="Mercedes-Benz S-Class" class="car-card__img" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='flex';" />
+            <div class="car-card__image-overlay"></div>
+            <div class="car-card__image-pattern"></div>
+            <div class="car-card__image-label" style="display:none;">
+              <span class="car-card__image-icon" aria-hidden="true">🚘</span>
+              <span class="car-card__image-name">Mercedes-Benz S-Class</span>
+            </div>
+            <div class="car-card__badge">
+              <span class="badge badge--dark">Бізнес</span>
+            </div>
+          </div>
+          <div class="car-card__body">
+            <div class="car-card__header">
+              <h3 class="car-card__name">Mercedes-Benz S-Class</h3>
+              <div class="car-card__price">
+                <span class="car-card__price-num">4 500 ₴</span>
+                <span class="car-card__price-label" data-ua="за день" data-en="per day">за день</span>
+              </div>
+            </div>
+            <div class="car-card__specs">
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">👤</span> 5 місць</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚡</span> 435 к.с.</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚙️</span> Автомат</span>
+            </div>
+            <p class="car-card__desc" data-ua="Флагманський седан Mercedes-Benz (W223) — еталон комфорту, розкоші та інновацій. Ідеальний вибір для ділових поїздок та урочистих подій." data-en="The flagship Mercedes-Benz sedan (W223) — the gold standard of comfort, luxury, and innovation. Perfect for business trips and VIP events.">
+              Флагманський седан Mercedes-Benz (W223) — еталон комфорту, розкоші та інновацій. Ідеальний вибір для ділових поїздок та урочистих подій.
+            </p>
+            <div class="car-card__actions">
+              <a href="contact.html?car=Mercedes-Benz+S-Class" class="btn btn--primary btn--sm" data-ua="Орендувати" data-en="Rent Now">Орендувати</a>
+              <a href="catalog.html?modal=6" class="btn btn--secondary btn--sm" data-ua="Детальніше" data-en="Details">Детальніше</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Car 2: Ferrari Roma -->
+        <article class="car-card">
+          <div class="car-card__image" role="img" aria-label="Ferrari Roma">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Ferrari_Roma.jpg" alt="Ferrari Roma" class="car-card__img" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='flex';" />
+            <div class="car-card__image-overlay"></div>
+            <div class="car-card__image-pattern"></div>
+            <div class="car-card__image-label" style="display:none;">
+              <span class="car-card__image-icon" aria-hidden="true">🏎️</span>
+              <span class="car-card__image-name">Ferrari Roma</span>
+            </div>
+            <div class="car-card__badge">
+              <span class="badge badge--dark">Спорт</span>
+            </div>
+          </div>
+          <div class="car-card__body">
+            <div class="car-card__header">
+              <h3 class="car-card__name">Ferrari Roma</h3>
+              <div class="car-card__price">
+                <span class="car-card__price-num">8 000 ₴</span>
+                <span class="car-card__price-label" data-ua="за день" data-en="per day">за день</span>
+              </div>
+            </div>
+            <div class="car-card__specs">
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">👤</span> 4 місця</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚡</span> 620 к.с.</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚙️</span> Автомат</span>
+            </div>
+            <p class="car-card__desc" data-ua="Ferrari Roma — витончене гран-туризмо у філософії «La Nuova Dolce Vita». Неперевершена італійська елегантність, 620 к.с. та драйв." data-en="Ferrari Roma — romantic gran turismo in the finest Maranello tradition. Beauty, speed, and passion in one.">
+              Ferrari Roma — витончене гран-туризмо у філософії «La Nuova Dolce Vita». Неперевершена італійська елегантність, 620 к.с. та драйв.
+            </p>
+            <div class="car-card__actions">
+              <a href="contact.html?car=Ferrari+Roma" class="btn btn--primary btn--sm" data-ua="Орендувати" data-en="Rent Now">Орендувати</a>
+              <a href="catalog.html?modal=17" class="btn btn--secondary btn--sm" data-ua="Детальніше" data-en="Details">Детальніше</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Car 3: Rolls-Royce Ghost -->
+        <article class="car-card">
+          <div class="car-card__image" role="img" aria-label="Rolls-Royce Ghost">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Rolls-Royce_Ghost_II_IAA_2021_1X7A0008.jpg" alt="Rolls-Royce Ghost" class="car-card__img" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='flex';" />
+            <div class="car-card__image-overlay"></div>
+            <div class="car-card__image-pattern"></div>
+            <div class="car-card__image-label" style="display:none;">
+              <span class="car-card__image-icon" aria-hidden="true">🚘</span>
+              <span class="car-card__image-name">Rolls-Royce Ghost</span>
+            </div>
+            <div class="car-card__badge">
+              <span class="badge badge--dark">Бізнес</span>
+            </div>
+          </div>
+          <div class="car-card__body">
+            <div class="car-card__header">
+              <h3 class="car-card__name">Rolls-Royce Ghost</h3>
+              <div class="car-card__price">
+                <span class="car-card__price-num">10 000 ₴</span>
+                <span class="car-card__price-label" data-ua="за день" data-en="per day">за день</span>
+              </div>
+            </div>
+            <div class="car-card__specs">
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">👤</span> 5 місць</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚡</span> 571 л.с.</span>
+              <span class="car-card__spec"><span class="car-card__spec-icon" aria-hidden="true">⚙️</span> Автомат</span>
+            </div>
+            <p class="car-card__desc" data-ua="Rolls-Royce Ghost — абсолютна вершина автомобільної розкоші. Ручна праця майстрів Goodwood, тиша та бездоганна елегантність." data-en="Rolls-Royce Ghost — the absolute pinnacle of automotive luxury. Handcrafted by Goodwood artisans, silence, and flawless elegance.">
+              Rolls-Royce Ghost — абсолютна вершина автомобільної розкоші. Ручна праця майстрів Goodwood, тиша та бездоганна елегантність.
+            </p>
+            <div class="car-card__actions">
+              <a href="contact.html?car=Rolls-Royce+Ghost" class="btn btn--primary btn--sm" data-ua="Орендувати" data-en="Rent Now">Орендувати</a>
+              <a href="catalog.html?modal=1" class="btn btn--secondary btn--sm" data-ua="Детальніше" data-en="Details">Детальніше</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="text-center mt-xl">
+        <a href="catalog.html" class="btn btn--secondary btn--lg" data-ua="Переглянути весь автопарк" data-en="View All Cars">
+          Переглянути весь автопарк →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY US ────────────────────────────────────────────── -->
+  <section class="section section--alt" aria-label="Наші переваги">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__ornament">✦ ◈ ✦</div>
+        <span class="section__label" data-ua="Чому LuxAuto" data-en="Why LuxAuto">Чому LuxAuto</span>
+        <h2 class="section__title" data-ua="Переваги нашого сервісу" data-en="Our Service Advantages">Переваги нашого сервісу</h2>
+        <p class="section__subtitle" data-ua="Ми піклуємося про кожну деталь, щоб ваша подорож була бездоганною від початку до кінця." data-en="We care about every detail to make your journey perfect from start to finish.">
+          Ми піклуємося про кожну деталь, щоб ваша подорож була бездоганною від початку до кінця.
+        </p>
+      </div>
+
+      <div class="features-grid reveal-stagger">
+        <div class="feature-box">
+          <div class="feature-box__icon" aria-hidden="true">🏆</div>
+          <h3 class="feature-box__title" data-ua="Преміум авто" data-en="Premium Cars">Преміум авто</h3>
+          <p class="feature-box__text" data-ua="Виключно офіційні автомобілі від провідних виробників. Кожне авто — не старше 2 років, у ідеальному стані." data-en="Exclusively official vehicles from leading manufacturers. Every car is no older than 2 years, in perfect condition.">
+            Виключно офіційні автомобілі від провідних виробників. Кожне авто — не старше 2 років, у ідеальному стані.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-box__icon" aria-hidden="true">📋</div>
+          <h3 class="feature-box__title" data-ua="Гнучкі умови" data-en="Flexible Terms">Гнучкі умови</h3>
+          <p class="feature-box__text" data-ua="Оренда від 1 дня. Без прихованих платежів. Прозора ціна з повним пакетом послуг та доставкою до місця призначення." data-en="Rental from 1 day. No hidden fees. Transparent pricing with a full package of services and delivery to your location.">
+            Оренда від 1 дня. Без прихованих платежів. Прозора ціна з повним пакетом послуг та доставкою до місця призначення.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-box__icon" aria-hidden="true">🛡️</div>
+          <h3 class="feature-box__title" data-ua="Страхування включено" data-en="Insurance Included">Страхування включено</h3>
+          <p class="feature-box__text" data-ua="Повне страхування КАСКО та ОСЦПВ включено у вартість. Ви захищені від будь-яких непередбачуваних ситуацій на дорозі." data-en="Full KASKO and MTPL insurance is included in the price. You are protected from any unforeseen road situations.">
+            Повне страхування КАСКО та ОСЦПВ включено у вартість. Ви захищені від будь-яких непередбачуваних ситуацій на дорозі.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-box__icon" aria-hidden="true">🕐</div>
+          <h3 class="feature-box__title" data-ua="Підтримка 24/7" data-en="24/7 Support">Підтримка 24/7</h3>
+          <p class="feature-box__text" data-ua="Наша команда завжди на зв'язку. Допомога на дорозі, доставка авто, відповіді на всі ваші питання цілодобово." data-en="Our team is always available. Roadside assistance, vehicle delivery, answers to all your questions around the clock.">
+            Наша команда завжди на зв'язку. Допомога на дорозі, доставка авто, відповіді на всі ваші питання цілодобово.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ──────────────────────────────────────── -->
+  <section class="section" aria-label="Відгуки клієнтів">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__ornament">✦ ◈ ✦</div>
+        <span class="section__label" data-ua="Відгуки" data-en="Reviews">Відгуки</span>
+        <h2 class="section__title" data-ua="Що кажуть наші клієнти" data-en="What Our Clients Say">Що кажуть наші клієнти</h2>
+      </div>
+
+      <div class="testimonials-grid reveal-stagger">
+        <article class="testimonial-card">
+          <div class="testimonial__stars" aria-label="Оцінка 5 із 5">★★★★★</div>
+          <p class="testimonial__text" data-ua="Орендував Ferrari Roma на тиждень — незабутній досвід! Команда LuxAuto допомогла з усіма деталями. Авто було в ідеальному стані, доставили прямо до готелю. Рекомендую всім, хто хоче відчути справжню розкіш." data-en="Rented Ferrari Roma for a week — an unforgettable experience! The LuxAuto team helped with all the details. The car was in perfect condition, delivered straight to the hotel. I recommend it to everyone who wants to feel true luxury.">
+            Орендував Ferrari Roma на тиждень — незабутній досвід! Команда LuxAuto допомогла з усіма деталями. Авто було в ідеальному стані, доставили прямо до готелю. Рекомендую всім, хто хоче відчути справжню розкіш.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar" aria-hidden="true">ОМ</div>
+            <div>
+              <div class="testimonial__name">Олексій Марченко</div>
+              <div class="testimonial__role" data-ua="Підприємець, Київ" data-en="Entrepreneur, Kyiv">Підприємець, Київ</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial__stars" aria-label="Оцінка 5 із 5">★★★★★</div>
+          <p class="testimonial__text" data-ua="Брала Rolls-Royce Ghost на день народження чоловіка — він був у захваті! Сервіс LuxAuto на найвищому рівні: ввічливий персонал, бездоганне авто і жодних прихованих платежів. Обов'язково звернемось ще." data-en="Rented a Rolls-Royce Ghost for my husband's birthday — he was thrilled! LuxAuto service is at the highest level: polite staff, flawless car, and no hidden fees. We will definitely contact you again.">
+            Брала Rolls-Royce Ghost на день народження чоловіка — він був у захваті! Сервіс LuxAuto на найвищому рівні: ввічливий персонал, бездоганне авто і жодних прихованих платежів. Обов'язково звернемось ще.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar" aria-hidden="true">КП</div>
+            <div>
+              <div class="testimonial__name">Катерина Петренко</div>
+              <div class="testimonial__role" data-ua="Дизайнер, Одеса" data-en="Designer, Odesa">Дизайнер, Одеса</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial__stars" aria-label="Оцінка 5 із 5">★★★★★</div>
+          <p class="testimonial__text" data-ua="Регулярно орендую Mercedes S-Class для ділових поїздок. LuxAuto — надійний партнер з бездоганним сервісом. Корпоративні умови та персональний менеджер — це те, що потрібно бізнесу." data-en="I regularly rent a Mercedes S-Class for business trips. LuxAuto is a reliable partner with impeccable service. Corporate terms and a personal manager — that's what business needs.">
+            Регулярно орендую Mercedes S-Class для ділових поїздок. LuxAuto — надійний партнер з бездоганним сервісом. Корпоративні умови та персональний менеджер — це те, що потрібно бізнесу.
+          </p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar" aria-hidden="true">ВК</div>
+            <div>
+              <div class="testimonial__name">Василь Коваленко</div>
+              <div class="testimonial__role" data-ua="CEO, Харків" data-en="CEO, Kharkiv">CEO, Харків</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ────────────────────────────────────────── -->
+  <section class="cta-banner" aria-label="Заклик до дії">
+    <div class="container">
+      <div class="cta-banner__content reveal">
+        <div class="section__ornament" style="justify-content:center; color:var(--gold);">✦ ◈ ✦</div>
+        <h2 class="cta-banner__title" data-ua="Готові до подорожі?" data-en="Ready for the Journey?">Готові до подорожі?</h2>
+        <p class="cta-banner__text" data-ua="Забронюйте преміальний автомобіль вже сьогодні та отримайте незабутній досвід керування розкіш'ю." data-en="Book a premium car today and experience the thrill of driving luxury.">
+          Забронюйте преміальний автомобіль вже сьогодні та отримайте незабутній досвід керування розкіш'ю.
+        </p>
+        <a href="catalog.html" class="btn btn--primary btn--lg" data-ua="Обрати автомобіль" data-en="Choose a Car">
+          ✦ Обрати автомобіль
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTS PREVIEW ──────────────────────────────────── -->
+  <section class="section section--alt" aria-label="Контактна інформація">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__ornament">✦ ◈ ✦</div>
+        <span class="section__label" data-ua="Зв'язатися" data-en="Get in Touch">Зв'язатися</span>
+        <h2 class="section__title" data-ua="Ми завжди на зв'язку" data-en="We Are Always Available">Ми завжди на зв'язку</h2>
+      </div>
+
+      <div class="contact-preview reveal-stagger">
+        <div class="contact-item">
+          <div class="contact-item__icon" aria-hidden="true">📞</div>
+          <div>
+            <span class="contact-item__label" data-ua="Телефон" data-en="Phone">Телефон</span>
+            <a href="tel:+380441234567" class="contact-item__value">+38 (044) 123-45-67</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon" aria-hidden="true">✉️</div>
+          <div>
+            <span class="contact-item__label" data-ua="Email" data-en="Email">Email</span>
+            <a href="mailto:info@luxauto.ua" class="contact-item__value">info@luxauto.ua</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon" aria-hidden="true">📍</div>
+          <div>
+            <span class="contact-item__label" data-ua="Адреса" data-en="Address">Адреса</span>
+            <span class="contact-item__value" data-ua="вул. Хрещатик, 22, Київ" data-en="22 Khreshchatyk St., Kyiv">вул. Хрещатик, 22, Київ</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon" aria-hidden="true">🕐</div>
+          <div>
+            <span class="contact-item__label" data-ua="Режим роботи" data-en="Working Hours">Режим роботи</span>
+            <span class="contact-item__value" data-ua="Пн–Нд: 08:00–22:00" data-en="Mon–Sun: 08:00–22:00">Пн–Нд: 08:00–22:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="logo" aria-label="LuxAuto">
+          <svg class="logo__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="4" fill="#2C2C2C"/>
+            <path d="M8 26 L14 14 L20 22 L26 14 L32 26" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="20" cy="30" r="2" fill="#C9A84C"/>
+          </svg>
+          <span class="logo__text">Lux<span>Auto</span></span>
+        </a>
+        <p class="footer__tagline" data-ua="Преміальний сервіс оренди автомобілів у Києві. Розкіш на кожний день." data-en="Premium car rental service in Kyiv. Luxury every day.">
+          Преміальний сервіс оренди автомобілів у Києві. Розкіш на кожний день.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="footer__title" data-ua="Навігація" data-en="Navigation">Навігація</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link" data-ua="Головна" data-en="Home">Головна</a></li>
+          <li><a href="catalog.html" class="footer__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+          <li><a href="about.html" class="footer__link" data-ua="Про нас" data-en="About Us">Про нас</a></li>
+          <li><a href="contact.html" class="footer__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+        </ul>
+      </div>
+
+      <!-- Fleet -->
+      <div>
+        <h3 class="footer__title" data-ua="Автопарк" data-en="Fleet">Автопарк</h3>
+        <ul class="footer__list">
+          <li><a href="catalog.html" class="footer__link">Mercedes-Benz S-Class</a></li>
+          <li><a href="catalog.html" class="footer__link">Ferrari Roma</a></li>
+          <li><a href="catalog.html" class="footer__link">Rolls-Royce Ghost</a></li>
+          <li><a href="catalog.html" class="footer__link">Lamborghini Urus</a></li>
+          <li><a href="catalog.html" class="footer__link" data-ua="Всі автомобілі →" data-en="All Cars →">Всі автомобілі →</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacts -->
+      <div>
+        <h3 class="footer__title" data-ua="Контакти" data-en="Contacts">Контакти</h3>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">📞</span>
+          <a href="tel:+380441234567">+38 (044) 123-45-67</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">✉️</span>
+          <a href="mailto:info@luxauto.ua">info@luxauto.ua</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">📍</span>
+          <span data-ua="вул. Хрещатик, 22, Київ" data-en="22 Khreshchatyk St., Kyiv">вул. Хрещатик, 22, Київ</span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">🕐</span>
+          <span data-ua="Пн–Нд: 08:00–22:00" data-en="Mon–Sun: 08:00–22:00">Пн–Нд: 08:00–22:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer__bottom">
+      <span class="footer__copy" data-ua="© 2024 LuxAuto. Усі права захищені." data-en="© 2024 LuxAuto. All rights reserved.">© 2024 LuxAuto. Усі права захищені.</span>
+      <span class="footer__ornament" aria-hidden="true">✦ ◈ ✦</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

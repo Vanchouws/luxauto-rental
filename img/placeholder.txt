@@ -1,0 +1,2 @@
+This folder is intentionally left as a placeholder.
+No actual image files are needed — car image placeholders are rendered via CSS gradients and inline SVG.

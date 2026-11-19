@@ -1,0 +1,342 @@
+/* ============================================================
+   LuxAuto — Responsive Stylesheet
+   responsive.css: mobile-first media queries
+   ============================================================ */
+
+/* ── Base (mobile-first defaults already in style.css) ───── */
+
+/* ── 480px and up ─────────────────────────────────────────── */
+@media (min-width: 480px) {
+  .hero__stats {
+    gap: var(--space-3xl);
+  }
+
+  .modal__booking-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── 640px and up ─────────────────────────────────────────── */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+
+  .contact-form__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── 768px and up (tablet) ────────────────────────────────── */
+@media (min-width: 768px) {
+  :root {
+    --header-h: 80px;
+  }
+
+  .hamburger,
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .nav__list {
+    display: flex !important;
+  }
+
+  .nav__controls {
+    display: flex !important;
+  }
+
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-story {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .modal__info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── 1024px and up (desktop) ──────────────────────────────── */
+@media (min-width: 1024px) {
+  .cars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 400px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+/* ── 1280px and up ────────────────────────────────────────── */
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Mobile overrides (max-width queries)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Below 768px ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  :root {
+    --header-h: 64px;
+    --space-4xl: 3rem;
+    --space-3xl: 2.5rem;
+  }
+
+  /* Show hamburger, hide desktop nav */
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .nav__list,
+  .nav__controls {
+    display: none;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    min-height: calc(100svh - var(--header-h));
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__stats {
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  /* Section header */
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  /* Cards */
+  .cars-grid,
+  .features-grid,
+  .testimonials-grid,
+  .team-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About story stacks */
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* Contact layout stacks */
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Form grid stacks */
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal__booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Modal info stacks */
+  .modal__info {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer stacks */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-search {
+    width: 100%;
+  }
+
+  /* Modal */
+  .modal {
+    max-height: 95vh;
+  }
+
+  .modal__header {
+    padding: var(--space-lg);
+  }
+
+  .modal__body {
+    padding: var(--space-lg);
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+  }
+
+  /* Contact form full width */
+  .contact-form {
+    padding: var(--space-lg);
+  }
+
+  /* Car card actions stack */
+  .car-card__actions {
+    flex-direction: column;
+  }
+
+  /* CTA banner */
+  .cta-banner {
+    padding: var(--space-3xl) 0;
+  }
+
+  /* Contact preview stacks */
+  .contact-preview {
+    grid-template-columns: 1fr;
+  }
+
+  /* Car specs wrap */
+  .car-card__specs {
+    gap: var(--space-sm);
+  }
+}
+
+/* ── Below 480px ──────────────────────────────────────────── */
+@media (max-width: 479px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__stat-num {
+    font-size: 1.4rem;
+  }
+
+  .mobile-nav__link {
+    font-size: 1.5rem;
+  }
+
+  .btn--lg {
+    padding: 14px 24px;
+  }
+
+  .logo__text {
+    font-size: 1.2rem;
+  }
+
+  .section__ornament::before,
+  .section__ornament::after {
+    max-width: 40px;
+  }
+}
+
+/* ── Print ────────────────────────────────────────────────── */
+@media print {
+  .header,
+  .footer,
+  .hero__actions,
+  .btn,
+  .mobile-nav,
+  .hamburger,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .section {
+    padding: 1cm 0;
+    break-inside: avoid;
+  }
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Dark mode media (fallback, overrides JS toggle) ─────── */
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --text-primary:   #F0EAE0;
+    --text-secondary: #C8BEAC;
+    --text-muted:     #8A8070;
+    --bg-primary:     #111010;
+    --bg-secondary:   #1C1A18;
+    --bg-dark:        #0A0908;
+    --bg-card:        #1C1A18;
+    --border:         #2E2A24;
+    --muted:          #8A8070;
+    --muted-light:    #605850;
+  }
+}
