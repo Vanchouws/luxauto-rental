@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автопарк — LuxAuto | Преміум оренда автомобілів</title>
+  <meta name="description" content="Каталог преміальних автомобілів LuxAuto: Mercedes, BMW, Ferrari, Porsche, Rolls-Royce, Lamborghini та інші. Фільтр за класом, детальні характеристики, бронювання онлайн.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Автопарк LuxAuto — Преміум автомобілі на оренду">
+  <meta property="og:description" content="9 ексклюзивних автомобілів класу Бізнес, Спорт, SUV та Кабріолет. Оренда від 4000 грн/день.">
+  <meta property="og:url" content="https://luxauto.ua/catalog.html">
+  <meta property="og:locale" content="uk_UA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Автопарк LuxAuto">
+  <meta name="twitter:description" content="Преміальні автомобілі на оренду в Києві">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════ -->
+<header class="header" role="banner">
+  <div class="header__inner">
+    <a href="index.html" class="logo" aria-label="LuxAuto — Головна">
+      <svg class="logo__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="40" height="40" rx="4" fill="#1A1A1A"/>
+        <path d="M8 26 L14 14 L20 22 L26 14 L32 26" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="20" cy="30" r="2" fill="#C9A84C"/>
+      </svg>
+      <span class="logo__text">Lux<span>Auto</span></span>
+    </a>
+
+    <nav class="nav" role="navigation" aria-label="Головна навігація">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link" data-ua="Головна" data-en="Home">Головна</a></li>
+        <li><a href="catalog.html" class="nav__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+        <li><a href="about.html" class="nav__link" data-ua="Про нас" data-en="About">Про нас</a></li>
+        <li><a href="contact.html" class="nav__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+      </ul>
+      <div class="nav__controls">
+        <div class="nav__lang" role="group" aria-label="Вибір мови">
+          <button class="lang-btn active" data-lang="ua">UA</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="theme-btn" id="theme-btn" aria-label="Змінити тему" title="Змінити тему">🌙</button>
+      </div>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація">
+  <ul class="mobile-nav__list">
+    <li><a href="index.html" class="mobile-nav__link" data-ua="Головна" data-en="Home">Головна</a></li>
+    <li><a href="catalog.html" class="mobile-nav__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+    <li><a href="about.html" class="mobile-nav__link" data-ua="Про нас" data-en="About">Про нас</a></li>
+    <li><a href="contact.html" class="mobile-nav__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+  </ul>
+  <div class="mobile-nav__controls">
+    <div class="nav__lang">
+      <button class="lang-btn active" data-lang="ua">UA</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button class="theme-btn" aria-label="Змінити тему" onclick="document.getElementById('theme-btn').click()">🌙</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN
+══════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ── PAGE HERO ─────────────────────────────────────────── -->
+  <section class="page-hero" aria-label="Заголовок сторінки Автопарк">
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="page-hero__label" data-ua="Преміальні автомобілі" data-en="Premium Vehicles">Преміальні автомобілі</span>
+        <h1 class="page-hero__title" data-ua="Наш Автопарк" data-en="Our Fleet">Наш Автопарк</h1>
+        <p class="page-hero__subtitle" data-ua="Ексклюзивна колекція розкішних автомобілів для тих, хто цінує справжній статус та бездоганний стиль." data-en="An exclusive collection of luxury vehicles for those who appreciate true prestige and impeccable style.">
+          Ексклюзивна колекція розкішних автомобілів для тих, хто цінує справжній статус та бездоганний стиль.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CATALOG ───────────────────────────────────────────── -->
+  <section class="section" aria-label="Каталог автомобілів">
+    <div class="container">
+
+      <!-- Filter bar -->
+      <div class="filter-bar" role="search" aria-label="Фільтр автомобілів">
+        <span class="filter-bar__label" data-ua="Фільтр:" data-en="Filter:">Фільтр:</span>
+
+        <div class="filter-tabs" role="group" aria-label="Клас автомобіля">
+          <button class="filter-tab active" data-class="all" data-ua="Всі" data-en="All">Всі</button>
+          <button class="filter-tab" data-class="Бізнес" data-ua="Бізнес" data-en="Business">Бізнес</button>
+          <button class="filter-tab" data-class="Спорт" data-ua="Спорт" data-en="Sport">Спорт</button>
+          <button class="filter-tab" data-class="SUV" data-ua="SUV" data-en="SUV">SUV</button>
+          <button class="filter-tab" data-class="Кабріолет" data-ua="Кабріолет" data-en="Cabriolet">Кабріолет</button>
+        </div>
+
+        <div class="filter-search">
+          <span class="filter-search__icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="car-search"
+            class="form-control"
+            data-ph-ua="Пошук за назвою…"
+            data-ph-en="Search by name…"
+            placeholder="Пошук за назвою…"
+            aria-label="Пошук автомобіля за назвою"
+          >
+        </div>
+      </div>
+
+      <!-- Cars grid (populated by catalog.js) -->
+      <div class="cars-grid" id="cars-grid" role="list" aria-label="Список автомобілів">
+        <!-- Cards injected by catalog.js -->
+      </div>
+
+      <!-- No results message -->
+      <div id="no-results" class="no-results" role="status" aria-live="polite">
+        <div class="no-results__icon" aria-hidden="true">🔍</div>
+        <p class="no-results__text" data-ua="Автомобілів за вашим запитом не знайдено. Спробуйте змінити фільтри." data-en="No cars found for your query. Try changing the filters.">
+          Автомобілів за вашим запитом не знайдено. Спробуйте змінити фільтри.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════
+     CAR MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="car-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal__header">
+      <h2 class="modal__title" id="modal-title">Автомобіль</h2>
+      <button class="modal__close" onclick="LuxCatalog.closeModal()" aria-label="Закрити вікно">✕</button>
+    </div>
+    <div class="modal__body">
+
+      <!-- Car image -->
+      <div class="modal__car-image" id="modal-car-image-container" role="img" aria-label="Фото автомобіля">
+        <img src="" alt="" class="modal__car-img" id="modal-car-img" style="display:none;" />
+        <div class="modal__car-image-overlay"></div>
+        <div class="modal__car-image-label" id="modal-car-placeholder">
+          <span class="modal__car-image-icon" id="modal-car-icon" aria-hidden="true">🚘</span>
+          <span class="modal__car-image-name" id="modal-car-image-name"></span>
+        </div>
+      </div>
+
+      <!-- Badge + description -->
+      <div style="margin-bottom:var(--space-md);">
+        <span class="badge badge--gold" id="modal-class"></span>
+      </div>
+      <p class="modal__desc" id="modal-desc"></p>
+
+      <!-- Specs + Price -->
+      <div class="modal__info">
+        <div class="modal__specs">
+          <div class="modal__specs-title" data-ua="Характеристики" data-en="Specifications">Характеристики</div>
+          <div id="modal-specs-body"></div>
+        </div>
+        <div class="modal__price-box">
+          <span class="modal__price-label" data-ua="Вартість оренди" data-en="Rental Price">Вартість оренди</span>
+          <span class="modal__price-num" id="modal-price"></span>
+          <span class="modal__price-sub" data-ua="за добу" data-en="per day">за добу</span>
+          <p class="modal__price-note" data-ua="Страхування та доставка включені" data-en="Insurance and delivery included">Страхування та доставка включені</p>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="modal__specs" style="margin-bottom:var(--space-xl);">
+        <div class="modal__specs-title" data-ua="Особливості комплектації" data-en="Key Features">Особливості комплектації</div>
+        <ul id="modal-features" style="list-style:none; margin-top:var(--space-sm);"></ul>
+      </div>
+
+      <!-- Mini booking form -->
+      <div class="modal__booking-title" data-ua="Швидке бронювання" data-en="Quick Booking">Швидке бронювання</div>
+      <form id="modal-booking-form" novalidate>
+        <div class="modal__booking-grid">
+          <div class="form-group">
+            <label class="form-label" for="modal-date-from" data-ua="Дата початку" data-en="Start Date">Дата початку</label>
+            <input type="date" id="modal-date-from" name="dateFrom" class="form-control" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-date-to" data-ua="Дата закінчення" data-en="End Date">Дата закінчення</label>
+            <input type="date" id="modal-date-to" name="dateTo" class="form-control" aria-required="true">
+          </div>
+        </div>
+        <input type="hidden" id="modal-car-select" name="car">
+        <button type="submit" class="btn btn--primary btn--full" data-ua="Перейти до бронювання" data-en="Proceed to Booking">
+          ✦ Перейти до бронювання
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo" aria-label="LuxAuto">
+          <svg class="logo__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="4" fill="#2C2C2C"/>
+            <path d="M8 26 L14 14 L20 22 L26 14 L32 26" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="20" cy="30" r="2" fill="#C9A84C"/>
+          </svg>
+          <span class="logo__text">Lux<span>Auto</span></span>
+        </a>
+        <p class="footer__tagline" data-ua="Преміальний сервіс оренди автомобілів у Києві." data-en="Premium car rental service in Kyiv.">
+          Преміальний сервіс оренди автомобілів у Києві.
+        </p>
+      </div>
+      <div>
+        <h3 class="footer__title" data-ua="Навігація" data-en="Navigation">Навігація</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link" data-ua="Головна" data-en="Home">Головна</a></li>
+          <li><a href="catalog.html" class="footer__link" data-ua="Автопарк" data-en="Fleet">Автопарк</a></li>
+          <li><a href="about.html" class="footer__link" data-ua="Про нас" data-en="About Us">Про нас</a></li>
+          <li><a href="contact.html" class="footer__link" data-ua="Контакти" data-en="Contacts">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title" data-ua="Класи авто" data-en="Car Classes">Класи авто</h3>
+        <ul class="footer__list">
+          <li><a href="catalog.html" class="footer__link" data-ua="Бізнес-клас" data-en="Business Class">Бізнес-клас</a></li>
+          <li><a href="catalog.html" class="footer__link" data-ua="Спорткари" data-en="Sports Cars">Спорткари</a></li>
+          <li><a href="catalog.html" class="footer__link">SUV</a></li>
+          <li><a href="catalog.html" class="footer__link" data-ua="Кабріолети" data-en="Cabriolets">Кабріолети</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title" data-ua="Контакти" data-en="Contacts">Контакти</h3>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">📞</span>
+          <a href="tel:+380441234567">+38 (044) 123-45-67</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">✉️</span>
+          <a href="mailto:info@luxauto.ua">info@luxauto.ua</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon" aria-hidden="true">📍</span>
+          <span data-ua="вул. Хрещатик, 22, Київ" data-en="22 Khreshchatyk St., Kyiv">вул. Хрещатик, 22, Київ</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy" data-ua="© 2024 LuxAuto. Усі права захищені." data-en="© 2024 LuxAuto. All rights reserved.">© 2024 LuxAuto. Усі права захищені.</span>
+      <span class="footer__ornament" aria-hidden="true">✦ ◈ ✦</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/catalog.js?v=20261119b"></script>
+</body>
+</html>
